@@ -1,0 +1,247 @@
+/* --------------- Main Fonts --------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Gabriela&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&display=swap");
+
+/* --------------- Icons --------------- */
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+/* --------------- Site General Settings --------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* --------------- Responsive Font Size --------------- */
+
+html {
+    font-size: 62.5%;
+}
+
+@media (max-width: 992px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+/* --------------- Body Settings --------------- */
+
+body {
+    color: var(--secondary);
+    background: var(--lightwhite);
+    font-family: var(--mainfont);
+}
+
+/* --------------- Root Variables --------------- */
+
+:root {
+    --darkblack: #161717;
+    --lightblack: #21252e;
+    --darkwhite: #ffffff;
+    --lightwhite: #f9fafc;
+
+    --primary: #f5c332;
+    --secondary: #231e41;
+    --tertiary: #6f6f87;
+    --quaternary: #ebedf0;
+
+    --mainfont: "Outfit", sans-serif;
+    --textfont: "Dosis", sans-serif;
+
+    --errorColor: #ef4444;
+    --warningColor: #f59e0b;
+    --successColor: #22c55e;
+}
+
+/* --------------- Custom Scroll Bar --------------- */
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--quaternary);
+}
+
+/* --------------- Selection --------------- */
+
+::selection {
+    color: var(--secondary);
+    background: var(--primary);
+}
+
+/* --------------- User Select None --------------- */
+
+img,
+.noselect {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* --------------- Custom Font Face --------------- */
+
+/* @font-face {
+    font-family: "*";
+    src: url("../fonts/*.ttf");
+} */
+
+/* --------------- Background Pattern --------------- */
+
+#patternBg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(../../assets/img/tertiary-pattern-bg.png) fixed center / 70%;
+    opacity: 1;
+    z-index: -1;
+}
+
+/* --------------- Logout & Delete Modal --------------- */
+
+section#logoutModal,
+section#deleteModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(22, 23, 23, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 12;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.15s ease-in-out;
+}
+
+section#logoutModal.active,
+section#deleteModal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+div.logoutModal,
+div.deleteModal {
+    position: relative;
+    margin: 1rem;
+    padding: 2rem 4rem;
+    width: 50rem;
+    height: auto;
+    background: var(--lightwhite);
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 12;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.15s ease-in-out;
+}
+
+section#logoutModal.active div.logoutModal,
+section#deleteModal.active div.deleteModal {
+    opacity: 1;
+    visibility: visible;
+}
+
+div.logoutModal h4,
+div.deleteModal h4 {
+    position: relative;
+    display: inline-block;
+    margin: 1rem 0;
+    font-size: 2.4rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    letter-spacing: 0.4px;
+}
+
+div.logoutModal p,
+div.deleteModal p {
+    margin: 1rem 0;
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    text-align: left;
+    letter-spacing: -0.2px;
+    line-height: 0.5;
+}
+
+div.logoutModal a.btn,
+div.deleteModal a.btn {
+    position: relative;
+    width: max-content;
+    margin: 2rem 0 1rem;
+    padding: 0.7rem 1.7rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--darkwhite);
+    background: var(--errorColor);
+    border-radius: 4px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+
+div.logoutModal a.btn:hover,
+div.deleteModal a.btn:hover {
+    filter: brightness(110%);
+}
+
+div.logoutModal a.btn i,
+div.deleteModal a.btn i {
+    margin: 0 0.5rem;
+    font-size: 1.8rem;
+}
+
+div.logoutModal .closeBtn,
+div.deleteModal .closeBtn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem;
+    height: 3.2rem;
+    width: 3.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+    color: var(--errorColor) !important;
+    background: rgba(239, 68, 68, 0.05) !important;
+    border: 2px solid rgba(239, 68, 68, 0.5) !important;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.2s ease-in-out;
+}
+
+div.logoutModal .closeBtn:hover,
+div.deleteModal .closeBtn:hover {
+    background: rgba(239, 68, 68, 0.2) !important;
+}

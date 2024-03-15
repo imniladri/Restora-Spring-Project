@@ -1,0 +1,56 @@
+/* -------------------- Loader Section -------------------- */
+
+div#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(6px);
+    z-index: 100;
+    clip-path: circle(100% at 50% 50%);
+    transition: all 1.2s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+div#preloader.inactive {
+    clip-path: circle(0% at 50% 50%);
+}
+
+div.loader {
+    position: relative;
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    animation: rotate 1s linear infinite
+}
+
+div.loader::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0px;
+    border-radius: 50%;
+    border: 5px solid var(--primary);
+    clip-path: inset(0 0 0 50%);
+}
+
+div.loader::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0px;
+    border-radius: 50%;
+    border: 5px solid var(--secondary);
+    clip-path: inset(0 50% 0 0);
+}
+
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}

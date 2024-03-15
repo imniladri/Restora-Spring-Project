@@ -1,0 +1,160 @@
+/* -------------------- Reservation Page -------------------- */
+
+section#reservation {
+    margin: 10rem auto;
+    padding: 2rem 4rem;
+    position: relative;
+    width: 100%;
+}
+
+div.reservation {
+    position: relative;
+    padding: 1rem 2rem;
+    background: var(--darkwhite);
+}
+
+div.reservation h2 {
+    margin: 1rem 0;
+    font-size: 4rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    text-align: left;
+    letter-spacing: -0.2px;
+}
+
+div.reservation h2 span {
+    font-weight: 600;
+    text-shadow: 2px 2px var(--primary);
+}
+
+div.reservation p {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--tertiary);
+    text-align: left;
+}
+
+div.reservation form {
+    position: relative;
+    margin: 2rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+div.reservation form h4 {
+    margin: 1rem 0;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    text-align: left;
+    letter-spacing: 0.2px;
+}
+
+div.reservation form h4 span {
+    text-shadow: 1px 1px var(--primary);
+}
+
+div.reservation form .form_group label {
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    text-align: left;
+    line-height: 1.4;
+}
+
+div.reservation form .form_group label i {
+    color: var(--errorColor);
+    font-style: normal;
+}
+
+div.reservation form div.failedMsg {
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--errorColor) !important;
+    background: rgba(239, 68, 68, 0.05) !important;
+    border: 2px solid rgba(239, 68, 68, 0.5) !important;
+    border-radius: 4px;
+}
+
+div.reservation form .form_group span {
+    display: block;
+    margin: 0.8rem 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--errorColor);
+    letter-spacing: 0.2px;
+}
+
+div.reservation form .form_group input,
+div.reservation form .form_group textarea {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0.5rem 0;
+    padding: 0.7rem 1rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--secondary) !important;
+    background: rgba(245, 195, 50, 0.05) !important;
+    border: 1.5px solid rgba(245, 195, 50, 0.3) !important;
+    border-radius: 4px;
+    text-align: left;
+    line-height: 1.4;
+    box-shadow: none !important;
+    outline: none !important;
+    transition: all 0.2s ease-in-out;
+}
+
+div.reservation form .form_group textarea {
+    font-weight: 400;
+}
+
+div.reservation form .form_group input:read-only {
+    background: rgba(245, 195, 50, 0.15) !important;
+}
+
+div.reservation form button {
+    position: relative;
+    margin: 1rem 0;
+    padding: 0.8rem 2.4rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--secondary) !important;
+    background: var(--primary) !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+    text-align: center;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+div.reservation form button:hover {
+    filter: brightness(110%);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    section#reservation {
+        padding: 2rem;
+    }
+
+    div.reservation h2 {
+        font-size: 3.5rem;
+    }
+}

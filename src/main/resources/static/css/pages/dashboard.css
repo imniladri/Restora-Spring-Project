@@ -1,0 +1,241 @@
+/* -------------------- Dashboard Section -------------------- */
+
+section#dashboard {
+    position: relative;
+    margin: 10rem auto;
+    padding: 1rem 6rem;
+    position: relative;
+    width: 100%;
+}
+
+div.dashboard {
+    position: relative;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+div.dashboard p {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: var(--textfont);
+    color: var(--tertiary);
+    text-align: left;
+}
+
+div.dashboard h2 {
+    margin: 1rem 0;
+    font-size: 3.8rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    text-align: left;
+    letter-spacing: 1px;
+    line-height: 0.7;
+}
+
+div.dashboard h2 span {
+    font-weight: 600;
+    text-shadow: 2px 2px var(--primary);
+}
+
+div.dashboard h4 {
+    margin: 1rem 0;
+    font-size: 2.4rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--tertiary);
+    text-align: left;
+    line-height: 1;
+}
+
+div.dashboard h4 span {
+    color: var(--secondary);
+    text-shadow: 0.5px 0.5px var(--primary);
+}
+
+div.dashboard form div.errorMsg {
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--errorColor) !important;
+    background: rgba(239, 68, 68, 0.05) !important;
+    border: 2px solid rgba(239, 68, 68, 0.5) !important;
+    border-radius: 4px;
+}
+
+div.dashboard form h3 {
+    margin: 3rem 0 1rem;
+    font-size: 2.4rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    text-align: left;
+    letter-spacing: -0.2px;
+}
+
+div.dashboard form .form_section {
+    position: relative;
+    margin: 2rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+div.dashboard form .form_section .form_group label {
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    text-align: left;
+    line-height: 1.4;
+}
+
+div.dashboard form .form_section .form_group input:not([type="radio"]) {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--secondary) !important;
+    background: rgba(245, 195, 50, 0.05) !important;
+    border: 1.5px solid rgba(245, 195, 50, 0.3) !important;
+    border-radius: 4px;
+    text-align: left;
+    line-height: 1.4;
+    box-shadow: none !important;
+    outline: none !important;
+    transition: all 0.2s ease-in-out;
+}
+
+div.dashboard form .form_section .form_group.radio h6 {
+    margin: 0.5rem 0;
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    text-align: left;
+    line-height: 1.4;
+}
+
+div.dashboard form .form_section .form_group.radio .form-check {
+    margin: 1rem auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+div.dashboard form .form_section .form_group.radio .form-check input {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    background: rgba(245, 195, 50, 0.05) !important;
+    border: 1.5px solid rgba(245, 195, 50, 0.3) !important;
+    border-radius: 50%;
+    box-shadow: none !important;
+    outline: none !important;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.dashboard form .form_section .form_group.radio .form-check input::after {
+    content: "";
+    position: absolute;
+    width: 1.3rem;
+    height: 1.3rem;
+    background: var(--primary) !important;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: all 0.1s ease-in-out;
+}
+
+div.dashboard form .form_section .form_group.radio .form-check input:checked:after {
+    transform: scale(1);
+}
+
+div.dashboard form .form_section .form_group.radio .form-check label {
+    margin: 0 1rem;
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--secondary) !important;
+    cursor: pointer;
+}
+
+div.dashboard form button {
+    position: relative;
+    margin: 1rem 0;
+    padding: 0.8rem 2.4rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--darkwhite) !important;
+    background: var(--successColor) !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    border: 2px solid var(--successColor);
+    border-radius: 4px;
+    text-align: center;
+    outline: none !important;
+    transition: all 0.2s ease-in-out;
+}
+
+div.dashboard form button:hover {
+    filter: brightness(110%);
+    transform: translateY(-2px);
+}
+
+div.dashboard form a.deletebtn {
+    position: relative;
+    margin: 1rem 0;
+    margin-left: 2rem;
+    padding: 0.8rem 2.4rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--darkwhite) !important;
+    background: var(--errorColor) !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    border: 2px solid var(--errorColor);
+    border-radius: 4px;
+    text-align: center;
+    outline: none !important;
+    transition: all 0.2s ease-in-out;
+}
+
+div.dashboard form a:hover {
+    filter: brightness(110%);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    section#dashboard {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 552px) {
+    div.dashboard h2 {
+        font-size: 3.6rem;
+    }
+
+    div.dashboard form h3,
+    div.dashboard form h4 {
+        font-size: 2.2rem;
+    }
+
+    div.dashboard form .form_section .form_group input:not([type="radio"]) {
+        padding: 0.8rem;
+        font-size: 1.8rem;
+        
+    }
+}

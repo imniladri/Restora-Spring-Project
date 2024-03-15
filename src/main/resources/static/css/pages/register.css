@@ -1,0 +1,214 @@
+/* -------------------- Register Page -------------------- */
+
+section#register {
+    margin: 10rem auto;
+    padding: 1rem 7rem;
+    position: relative;
+    width: 100%;
+}
+
+div.register {
+    position: relative;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(1px);
+}
+
+div.register h2 {
+    margin: 1rem 0;
+    font-size: 4rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    text-align: left;
+    letter-spacing: -0.2px;
+}
+
+div.register h2 span {
+    font-weight: 600;
+    text-shadow: 2px 2px var(--primary);
+}
+
+div.register p {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--tertiary);
+    text-align: left;
+}
+
+div.register h3 {
+    margin: 3rem 0 1rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    text-align: left;
+    letter-spacing: -0.2px;
+}
+
+div.register div.errorStatus {
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--errorColor) !important;
+    background: rgba(239, 68, 68, 0.05) !important;
+    border: 2px solid rgba(239, 68, 68, 0.5) !important;
+    border-radius: 4px;
+}
+
+div.register form .form_section {
+    position: relative;
+    margin: 2rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+div.register form .form_section .form_group label {
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    text-align: left;
+    line-height: 1.4;
+}
+
+div.register form .form_section .form_group label i {
+    color: var(--errorColor);
+    font-style: normal;
+}
+
+div.register form .form_section .form_group p.error,
+div.register form .form_section .form_group span {
+    display: block;
+    margin: 0.8rem 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--errorColor);
+    letter-spacing: 0.2px;
+}
+
+div.register form .form_section .form_group input:not([type="radio"]) {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0.5rem 0;
+    padding: 0.7rem 1rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--secondary) !important;
+    background: rgba(245, 195, 50, 0.05) !important;
+    border: 1.5px solid rgba(245, 195, 50, 0.3) !important;
+    border-radius: 4px;
+    text-align: left;
+    line-height: 1.4;
+    box-shadow: none !important;
+    outline: none !important;
+    transition: all 0.2s ease-in-out;
+}
+
+div.register form .form_section .form_group.radio h6 {
+    margin: 0.5rem 0;
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    text-align: left;
+    line-height: 1.4;
+}
+
+div.register form .form_section .form_group.radio h6 i {
+    color: var(--errorColor);
+    font-style: normal;
+}
+
+div.register form .form_section .form_group.radio .form-check {
+    margin: 1rem auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+div.register form .form_section .form_group.radio .form-check input {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    background: rgba(245, 195, 50, 0.05) !important;
+    border: 1.5px solid rgba(245, 195, 50, 0.3) !important;
+    border-radius: 50%;
+    box-shadow: none !important;
+    outline: none !important;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.register form .form_section .form_group.radio .form-check input::after {
+    content: "";
+    position: absolute;
+    width: 1.3rem;
+    height: 1.3rem;
+    background: var(--primary) !important;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: all 0.1s ease-in-out;
+}
+
+div.register form .form_section .form_group.radio .form-check input:checked:after {
+    transform: scale(1);
+}
+
+div.register form .form_section .form_group.radio .form-check label {
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--secondary) !important;
+    cursor: pointer;
+}
+
+div.register form button {
+    position: relative;
+    margin: 1rem 0;
+    padding: 0.8rem 2.4rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--secondary) !important;
+    background: var(--primary) !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+    text-align: center;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+div.register form button:hover {
+    filter: brightness(110%);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    section#register {
+        padding: 1rem;
+    }
+
+    div.register h2 {
+        font-size: 3.5rem;
+    }
+
+    div.register h3 {
+        font-size: 2rem;
+    }
+}

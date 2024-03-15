@@ -1,0 +1,268 @@
+/* -------------------- Orders Page -------------------- */
+
+section#orders {
+    margin: 10rem auto;
+    padding: 2rem 4rem;
+    position: relative;
+    width: 100%;
+}
+
+div.orders {
+    position: relative;
+    padding: 1rem 2rem;
+    background: var(--darkwhite);
+}
+
+div.orders h2 {
+    margin: 1rem 0;
+    font-size: 4rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    text-align: left;
+    letter-spacing: -0.2px;
+}
+
+div.orders h2 span {
+    font-weight: 600;
+    text-shadow: 2px 2px var(--primary);
+}
+
+div.orders p {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--tertiary);
+    text-align: left;
+}
+
+div.orders p span {
+    font-weight: 500;
+    color: var(--secondary);
+}
+
+/* Orders Empty */
+
+div.orders .orders_empty {
+    position: relative;
+    margin: 2rem auto;
+    width: 100%;
+}
+
+div.orders .orders_empty h4 {
+    margin: 1rem 0;
+    font-size: 1.9rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    text-align: left;
+    letter-spacing: 0.6px;
+}
+
+div.orders .orders_empty a.btn {
+    position: relative;
+    margin: 1rem 0;
+    padding: 0.8rem 2rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    background: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+    text-align: center;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+div.orders .orders_empty a.btn:hover {
+    filter: brightness(110%);
+}
+
+/* Orders List */
+
+div.orders .orders_list {
+    position: relative;
+    margin: 2rem auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-content: flex-start;
+    place-items: flex-start;
+    gap: 3rem;
+}
+
+div.orders .orders_list .order_card {
+    position: relative;
+    padding: 1rem 2rem;
+    background: var(--darkwhite);
+    border: 2px solid var(--quaternary);
+    border-radius: 4px;
+    z-index: 1;
+}
+
+div.orders .orders_list .order_card hr {
+    margin: 1rem auto 1rem;
+    width: 100%;
+    border: none;
+    height: 1px;
+    background: var(--tertiary);
+}
+
+div.orders .orders_list .order_card h5 {
+    margin: 0.5rem 0;
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--tertiary);
+    text-align: left;
+    letter-spacing: -0.2px;
+}
+
+div.orders .orders_list .order_card h5 span {
+    color: var(--secondary);
+    font-weight: 500;
+}
+
+div.orders .orders_list .order_card p {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: var(--mainfont);
+    color: var(--tertiary);
+    text-align: left;
+    line-height: 1.4;
+}
+
+div.orders .orders_list .order_card p span {
+    color: var(--secondary);
+    font-weight: 400;
+}
+
+div.orders .orders_list .order_card h4 {
+    margin: 1rem 0;
+    font-family: var(--mainfont);
+    color: var(--tertiary);
+    text-align: left;
+    letter-spacing: -0.2px;
+}
+
+div.orders .orders_list .order_card h4 span {
+    color: var(--secondary);
+    font-weight: 500;
+}
+
+div.orders .orders_list .order_card h4.orderTotal {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+div.orders .orders_list .order_card h4.orderTotal span {
+    color: var(--secondary);
+    font-weight: 500;
+}
+
+div.orders .orders_list .order_card h4.orderDate {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+div.orders .orders_list .order_card h4.orderDate span {
+    margin-left: 0.5rem;
+    color: var(--secondary);
+    font-weight: 500;
+}
+
+div.orders .orders_list .order_card h4.orderPayment {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+div.orders .orders_list .order_card h4.orderPayment span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.5rem;
+    color: var(--successColor);
+    font-weight: 500;
+}
+
+div.orders .orders_list .order_card h4.orderPayment span i {
+    margin-right: 0.5rem;
+    font-size: 1.8rem;
+}
+
+div.orders .orders_list .order_card button.btn {
+    position: relative;
+    margin: 0.5rem 0;
+    padding: 0.4rem 1rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    background: var(--quaternary);
+    border: 2px solid var(--quaternary) !important;
+    border-radius: 4px;
+    text-align: center;
+    outline: none !important;
+    transition: all 0.2s ease-in-out;
+}
+
+div.orders .orders_list .order_card button.btn:hover {
+    filter: brightness(90%);
+}
+
+div.orders .orders_list .order_card .order_item {
+    position: relative;
+    display: none;
+}
+
+div.orders .orders_list .order_card .order_item h6 {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--tertiary);
+    text-align: left;
+    letter-spacing: -0.2px;
+}
+
+div.orders .orders_list .order_card .order_item h6 span img {
+    margin: auto;
+    margin-right: 0.5rem;
+    width: 30px;
+    height: auto;
+    border-radius: 50%;
+}
+
+@media (max-width: 992px) {
+    div.orders .orders_list .order_card p {
+        line-height: 1.2;
+    }
+}
+
+@media (max-width: 768px) {
+    div.orders .orders_list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 564px) {
+    section#orders {
+        padding: 2rem;
+    }
+
+    div.orders h2 {
+        font-size: 3.5rem;
+    }
+
+    div.orders h2 span {
+        text-shadow: 1px 1px var(--primary);
+    }
+}

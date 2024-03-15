@@ -1,0 +1,442 @@
+/* -------------------- Menu Page -------------------- */
+
+section#menu {
+    margin: 10rem auto;
+    padding: 2rem 4rem;
+    position: relative;
+    width: 100%;
+}
+
+div.menu {
+    position: relative;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(2px);
+}
+
+div.menu h2 {
+    margin: 1rem 0;
+    font-size: 4rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    text-align: left;
+    letter-spacing: -0.2px;
+}
+
+div.menu h2 span {
+    font-weight: 600;
+    text-shadow: 2px 2px var(--primary);
+}
+
+div.menu p {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--tertiary);
+    text-align: left;
+}
+
+@media (max-width: 992px) {
+    section#menu {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 568px) {
+    div.menu h2 {
+        font-size: 3.8rem;
+    }
+}
+
+/* Search Bar */
+
+div.menu form.input-group {
+    position: relative;
+    margin: 1rem 0;
+    width: 50%;
+}
+
+div.menu form.input-group input {
+    margin: auto;
+    height: 5rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: rgba(118, 94, 23, 1) !important;
+    background: rgba(245, 195, 50, 0.05) !important;
+    border: 2px solid rgba(245, 195, 50, 0.8) !important;
+    border-radius: 4px !important;
+    text-align: left;
+    line-height: 1.4;
+    letter-spacing: 0.1px;
+    box-shadow: none !important;
+    outline: none !important;
+    transition: all 0.2s ease-in-out;
+}
+
+div.menu form.input-group input::placeholder {
+    color: rgba(118, 94, 23, 0.7) !important;
+}
+
+div.menu form.input-group button {
+    position: relative;
+    left: 1rem;
+    height: 5rem;
+    width: 6rem;
+    font-size: 2.6rem;
+    color: rgba(118, 94, 23, 1) !important;
+    background: rgba(245, 195, 50, 0.05) !important;
+    border: 2px solid rgba(245, 195, 50, 0.8) !important;
+    border-radius: 4px !important;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+
+div.menu form.input-group button:hover {
+    background: rgba(245, 195, 50, 0.2) !important;
+}
+
+@media (max-width: 768px) {
+    div.menu form.input-group {
+        width: 100%;
+    }
+
+    div.menu form.input-group button {
+        width: 5rem;
+    }
+}
+
+/* Toast Alert Box */
+
+div#toastSuccess {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    margin: 1rem;
+    padding: 1.5rem 3rem;
+    border-radius: 4px;
+    color: var(--darkwhite);
+    background: var(--successColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 12;
+    transition: all 0.2s ease-in-out;
+}
+
+div#toastSuccess i {
+    margin-right: 1rem;
+    font-size: 3rem;
+}
+
+div#toastSuccess span {
+    font-size: 1.7rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+}
+
+div#toastSuccess.inactive {
+    transform: translateY(-150%);
+}
+
+/* Delete Alert Box */
+
+div.menu div.deleteStatus {
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    border-radius: 4px;
+}
+
+div.menu div.deleteStatus.isSuccess {
+    color: var(--successColor) !important;
+    background: rgba(34, 197, 94, 0.05) !important;
+    border: 2px solid rgba(34, 197, 94, 0.5) !important;
+}
+
+div.menu div.deleteStatus.isError {
+    color: var(--errorColor) !important;
+    background: rgba(239, 68, 68, 0.05) !important;
+    border: 2px solid rgba(239, 68, 68, 0.5) !important;
+}
+
+/* Menu Empty */
+
+div.menu .menu_empty {
+    position: relative;
+    margin: 4rem auto;
+    width: 100%;
+}
+
+div.menu .menu_empty h4 {
+    margin: 1rem 0;
+    font-size: 1.9rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    text-align: left;
+    letter-spacing: 0.6px;
+}
+
+div.menu .menu_empty a.btn {
+    position: relative;
+    margin: 1rem 0;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    background: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+    text-align: center;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+div.menu .menu_empty a.btn:hover {
+    filter: brightness(110%);
+}
+
+/* Food Menu Card */
+
+div.menu .menu_items {
+    --cardWidth: 25rem;
+    position: relative;
+    margin: 8rem auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, var(--cardWidth));
+    place-content: space-between;
+    place-items: center;
+    gap: 6rem 3rem;
+}
+
+div.menu .menu_items .food_card {
+    position: relative;
+    display: block;
+    width: var(--cardWidth);
+    height: auto;
+    border-radius: 2px;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    div.menu .menu_items {
+        margin: 5rem auto;
+    }
+}
+
+/* Food Image */
+
+div.menu .menu_items .food_card .food_img {
+    position: relative;
+    display: block;
+    padding-bottom: 100%;
+    background: var(--lightwhite);
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+}
+
+div.menu .menu_items .food_card .food_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: scale(1.01);
+    transition: 0.2s ease-in-out;
+    z-index: 1;
+}
+
+div.menu .menu_items .food_card:hover .food_img img {
+    transform: scale(1.05);
+}
+
+div.menu .menu_items .food_card .food_img .food_badge {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    padding: 3px 10px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    background: var(--darkwhite);
+    border-radius: 2px;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+div.menu .menu_items .food_card .food_img .food_badge i {
+    margin-right: 2px;
+    font-size: 1.5rem;
+}
+
+/* Food Title */
+
+div.menu .menu_items .food_card .food_title {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--lightwhite);
+}
+
+div.menu .menu_items .food_card .food_title h4 {
+    padding-top: 0.8rem;
+    padding-left: 1.2rem;
+    width: calc(100% - 10rem);
+    font-size: 1.8rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+div.menu .menu_items .food_card .food_title .food_price {
+    width: 7rem;
+    height: 6rem;
+    font-size: 2.4rem;
+    font-weight: 600;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    background: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.menu .menu_items .food_card .food_title .food_price i {
+    position: relative;
+    margin-right: -2px;
+    margin-bottom: -7px;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    div.menu .menu_items .food_card .food_title .food_price {
+        font-size: 2rem;
+    }
+}
+
+/* Food Description */
+
+div.menu .menu_items .food_card .food_desc {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--lightwhite);
+}
+
+div.menu .menu_items .food_card .food_desc p {
+    padding: 0.5rem 1rem;
+    padding-left: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--tertiary);
+
+    /* Number of Lines to Show */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+div.menu .menu_items .food_card .food_desc a {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0.5rem auto;
+    padding: 1rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    text-align: center;
+    border-radius: 0 0 2px 2px;
+    outline: none;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+div.menu .menu_items .food_card .food_desc a i {
+    margin-right: 4px;
+    font-size: 2.3rem;
+    transform: translateX(-0.5rem);
+    transition: all 0.2s ease-in-out;
+}
+
+div.menu .menu_items .food_card .food_desc a:hover {
+    filter: brightness(110%);
+}
+
+div.menu .menu_items .food_card .food_desc a:hover i {
+    transform: translateX(-0.1rem);
+}
+
+div.menu .menu_items .food_card .food_desc a.addBtn {
+    color: var(--secondary) !important;
+    background: var(--primary) !important;
+}
+
+div.menu .menu_items .food_card .food_desc a.removeBtn {
+    color: var(--lightwhite) !important;
+    background: var(--secondary) !important;
+}
+
+@media (max-width: 768px) {
+    div.menu .menu_items .food_card .food_desc p {
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+    }
+}
+
+/* Food Edit */
+
+div.menu .menu_items .food_card a.food_edit {
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    padding: 1rem;
+    height: 4rem;
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.4rem;
+    color: var(--darkwhite) !important;
+    background: var(--secondary) !important;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    z-index: 2;
+    transition: all 0.2s ease-in-out;
+}
+
+div.menu .menu_items .food_card a.food_edit:hover {
+    filter: brightness(180%);
+}

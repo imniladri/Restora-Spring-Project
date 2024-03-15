@@ -1,0 +1,272 @@
+/* -------------------- Bookings Page -------------------- */
+
+section#bookings {
+    margin: 10rem auto;
+    padding: 2rem 4rem;
+    position: relative;
+    width: 100%;
+}
+
+div.bookings {
+    position: relative;
+    padding: 1rem 2rem;
+    background: var(--darkwhite);
+}
+
+div.bookings h2 {
+    margin: 1rem 0;
+    font-size: 4rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    text-align: left;
+    letter-spacing: -0.2px;
+}
+
+div.bookings h2 span {
+    font-weight: 600;
+    text-shadow: 2px 2px var(--primary);
+}
+
+div.bookings p {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--tertiary);
+    text-align: left;
+}
+
+div.bookings p span {
+    color: var(--secondary);
+    font-weight: 600;
+    text-shadow: 0.5px 0.5px var(--primary);
+}
+
+div.bookings div.deleteStatus {
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    border-radius: 4px;
+}
+
+div.bookings div.deleteStatus.isSuccess {
+    color: var(--successColor) !important;
+    background: rgba(34, 197, 94, 0.05) !important;
+    border: 2px solid rgba(34, 197, 94, 0.5) !important;
+}
+
+div.bookings div.deleteStatus.isError {
+    color: var(--errorColor) !important;
+    background: rgba(239, 68, 68, 0.05) !important;
+    border: 2px solid rgba(239, 68, 68, 0.5) !important;
+}
+
+/* Bookings Empty */
+
+div.bookings .bookings_empty {
+    position: relative;
+    margin: 4rem auto;
+    width: 100%;
+}
+
+div.bookings .bookings_empty h4 {
+    margin: 1rem 0;
+    font-size: 1.9rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    text-align: left;
+    letter-spacing: 0.6px;
+}
+
+div.bookings .bookings_empty a.btn {
+    position: relative;
+    margin: 1rem 0;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    background: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+    text-align: center;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+div.bookings .bookings_empty a.btn:hover {
+    filter: brightness(110%);
+}
+
+/* Bookings List */
+
+div.bookings .bookings_list {
+    --cardWidth: 50rem;
+    position: relative;
+    margin: 4rem auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-content: flex-start;
+    place-items: flex-start;
+    gap: 6rem 3rem;
+}
+
+div.bookings_list .booking_card {
+    position: relative;
+    padding: 2rem;
+    width: var(--cardWidth);
+    height: auto;
+    background: var(--darkwhite);
+    border: 2px solid var(--quaternary);
+    border-radius: 4px;
+    z-index: 1;
+}
+
+div.bookings_list .booking_card hr {
+    margin: 1rem auto 1rem;
+    width: 100%;
+    border: none;
+    height: 2px;
+    background: var(--tertiary);
+}
+
+div.bookings_list .booking_card .booking_customer h3 {
+    margin: 0.5rem 0;
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--tertiary);
+    text-align: left;
+    letter-spacing: -0.2px;
+}
+
+div.bookings_list .booking_card .booking_customer h3 span {
+    font-weight: 500;
+}
+
+div.bookings_list .booking_card .booking_customer p {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--tertiary);
+    text-align: left;
+}
+
+div.bookings_list .booking_card .booking_customer p span {
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-shadow: none;
+    text-transform: uppercase;
+}
+
+div.bookings_list .booking_card .booking_details div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+div.bookings_list .booking_card .booking_details div h4 {
+    margin: 0.5rem 0;
+    font-size: 1.7rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--tertiary);
+    text-align: left;
+}
+
+div.bookings_list .booking_card .booking_details div h4 span {
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: var(--textfont);
+    letter-spacing: 0.6px;
+}
+
+div.bookings_list .booking_card .booking_details h5 {
+    margin: 0.5rem 0;
+    font-size: 1.7rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--tertiary);
+    text-align: left;
+}
+
+div.bookings_list .booking_card .booking_details p {
+    margin: 1rem 0;
+    font-size: 1.6rem;
+    font-weight: 300;
+    font-family: var(--mainfont);
+    color: var(--tertiary);
+    text-align: left;
+    letter-spacing: 0.2px;
+}
+
+div.bookings_list .booking_card a.deleteBtn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    color: var(--errorColor) !important;
+    background: rgba(239, 68, 68, 0.05) !important;
+    border: 2px solid rgba(239, 68, 68, 0.5) !important;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 2;
+    transition: all 0.2s ease-in-out;
+}
+
+div.bookings_list .booking_card a.deleteBtn:hover {
+    background: rgba(239, 68, 68, 0.2) !important;
+}
+
+@media (max-width: 1040px) {
+    div.bookings .bookings_list {
+        --cardWidth: 40rem;
+        margin: 2rem auto;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    div.bookings .bookings_list {
+        --cardWidth: 100%;
+        margin: 2rem auto;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    section#bookings {
+        padding: 2rem;
+    }
+
+    div.bookings .bookings_list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 564px) {
+    div.bookings h2 {
+        font-size: 3.5rem;
+    }
+
+    div.bookings_list .booking_card {
+        padding: 1rem;
+    }
+}

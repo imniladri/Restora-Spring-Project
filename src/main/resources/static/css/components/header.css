@@ -1,0 +1,433 @@
+/* -------------------- Header Section -------------------- */
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    padding: 2rem 6rem;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    user-select: none;
+    transition: all 0.4s ease;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* -------------------- Menu Icon -------------------- */
+
+header nav .nav_action .menu_icon {
+    margin: 0 2px;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav .nav_action .menu_icon .menu_inner {
+    position: absolute;
+    width: 50%;
+    height: 2.5px;
+    background: var(--secondary);
+    border-radius: 4px;
+}
+
+header nav .nav_action .menu_icon .menu_inner:before,
+header nav .nav_action .menu_icon .menu_inner:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2.5px;
+    background: var(--secondary);
+    border-radius: 4px;
+}
+
+header nav .nav_action .menu_icon .menu_inner:before {
+    top: -6px;
+}
+
+header nav .nav_action .menu_icon .menu_inner:after {
+    top: 6px;
+}
+
+/* Animation */
+
+header nav .nav_action .menu_squeeze .menu_inner,
+header nav .nav_action .menu_squeeze .menu_inner:before,
+header nav .nav_action .menu_squeeze .menu_inner:after {
+    transition: top 0.2s 0.2s, transform 0.2s, background 0.2s;
+}
+
+header nav .nav_action .menu_squeeze.menu_active .menu_inner {
+    background: transparent;
+    transition: background 0.2s;
+}
+
+header nav .nav_action .menu_squeeze.menu_active .menu_inner:before {
+    top: 0;
+    transform: rotate(-45deg);
+    transition: top 0.2s, transform 0.2s 0.2s;
+}
+
+header nav .nav_action .menu_squeeze.menu_active .menu_inner:after {
+    top: 0;
+    transform: rotate(45deg);
+    transition: top 0.2s, transform 0.2s 0.2s;
+}
+
+@media (min-width: 768px) {
+    header nav .nav_action .menu_icon {
+        display: none;
+    }
+}
+
+/* -------------------- Navbar Brand -------------------- */
+
+header nav .nav_brand {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    user-select: none;
+}
+
+header nav .nav_brand img {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    transform: rotate(-30deg);
+    margin: auto;
+    width: 3rem;
+    height: auto;
+}
+
+header nav .nav_brand span {
+    margin: 0 0.5rem;
+    font-size: 2.8rem;
+    font-weight: 600;
+    font-family: var(--textfont);
+    color: var(--secondary);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@media (max-width: 552px) {
+    header nav .nav_brand img {
+        top: -6px;
+        left: -6px;
+        width: 2.5rem;
+    }
+
+    header nav .nav_brand span {
+        font-size: 2.6rem;
+    }
+}
+
+/* -------------------- Navbar Links -------------------- */
+
+header nav .nav_items {
+    margin-left: 2rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav .nav_items a.nav_links {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+header nav .nav_items a.nav_links::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    width: 3rem;
+    height: 2.5px;
+    border-radius: 4px;
+    background: var(--primary);
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+header nav .nav_items a.nav_links:hover {
+    color: var(--primary);
+}
+
+header nav .nav_items a.nav_links:hover:after {
+    transform: scaleX(1);
+}
+
+/* -------------------- Navbar Links : Mobile -------------------- */
+
+@media (max-width: 768px) {
+    header {
+        padding: 2rem 0;
+        background: var(--lightwhite);
+    }
+
+    header nav .nav_brand {
+        margin-left: 2rem;
+    }
+
+    header nav .nav_action {
+        margin-right: 2rem;
+    }
+
+    header nav .nav_items {
+        position: absolute;
+        top: 6rem;
+        margin: auto;
+        padding: 1rem 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: var(--lightwhite);
+        clip-path: inset(0 0 100% 0);
+        transition: all 0.3s cubic-bezier(0.45, 0, 0.55, 1);
+    }
+
+    header nav .nav_items a.nav_links {
+        margin: 1rem auto;
+        font-size: 1.6rem;
+    }
+
+    header nav .nav_items.active {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+/* -------------------- Navbar Action Btn -------------------- */
+
+header nav .nav_action {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Cart Button */
+
+header nav .nav_action a.cartBtn {
+    margin: 0 2px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.8rem;
+    height: 4.8rem;
+    color: var(--secondary);
+    background: var(--quaternary);
+    box-shadow: 0 0 0 2px var(--lightwhite);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+header nav .nav_action a.cartBtn:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+header nav .nav_action a.cartBtn img {
+    margin: auto;
+    width: 2.2rem;
+    height: auto;
+}
+
+header nav .nav_action a.cartBtn span {
+    position: absolute;
+    right: -3px;
+    top: -3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 1rem;
+    height: 1rem;
+    background: var(--primary);
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    text-align: center;
+}
+
+@media (max-width: 552px) {
+    header nav .nav_action a.cartBtn img {
+        width: 2rem;
+    }
+}
+
+/* Action Button */
+
+header nav .nav_action a.actionBtn {
+    margin: 0 1rem;
+    padding: 1rem 2.5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary);
+    border-radius: 2px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+header nav .nav_action a.actionBtn:hover {
+    filter: brightness(110%);
+}
+
+header nav .nav_action a.actionBtn img {
+    margin: 0 2px;
+    width: 2rem;
+    height: auto;
+}
+
+header nav .nav_action a.actionBtn span {
+    font-size: 1.4rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    text-align: center;
+}
+
+/* User Button */
+
+header nav .nav_action a.userBtn {
+    margin: 0 5px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.7rem;
+    height: 4.7rem;
+    color: var(--secondary);
+    background: var(--quaternary);
+    box-shadow: 0 0 0 2px var(--lightwhite);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+header nav .nav_action a.userBtn:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+header nav .nav_action a.userBtn img {
+    margin: auto;
+    width: 2rem;
+    height: auto;
+    opacity: 0.5;
+}
+
+@media (max-width: 552px) {
+    header nav .nav_action a.userBtn img {
+        width: 1.8rem;
+    }
+}
+
+/* User Menu */
+
+header nav .nav_action .userMenu {
+    padding: 1rem 1.5rem;
+    position: absolute;
+    top: 7rem;
+    right: 1rem;
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    background: var(--lightwhite);
+    border: 2px solid var(--quaternary);
+    border-radius: 4px;
+    transition: all 0.2s ease;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-1rem);
+}
+
+header nav .nav_action .userMenu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+header nav .nav_action .userMenu h4 {
+    margin: 1rem 0 0;
+    font-size: 1.4rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    text-align: left;
+}
+
+header nav .nav_action .userMenu h4 span {
+    display: block;
+    margin: 4px 0;
+    font-size: 2rem;
+}
+
+header nav .nav_action .userMenu hr {
+    margin: 1rem auto;
+    width: 100%;
+    border: none;
+    height: 2px;
+    background: var(--tertiary);
+}
+
+header nav .nav_action .userMenu a {
+    margin: 3px 0;
+    padding: 6px 5px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--secondary);
+    background: rgba(35, 30, 65, 0.05);
+    text-align: left;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all 0.15s ease-in-out;
+}
+
+header nav .nav_action .userMenu a:hover {
+    background: rgba(35, 30, 65, 0.1);
+}
+
+header nav .nav_action .userMenu a i {
+    font-size: 1.8rem;
+    transition: all 0.15s ease-in-out;
+}
+
+header nav .nav_action .userMenu a:hover i {
+    transform: translateX(-2px);
+}
