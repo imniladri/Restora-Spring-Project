@@ -14,11 +14,11 @@ import org.springframework.mock.web.MockHttpSession;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 
-import com.cognizant.RestoraApp.bean.UserBean;
-import com.cognizant.RestoraApp.controller.UserController;
-import com.cognizant.RestoraApp.entity.User;
-import com.cognizant.RestoraApp.service.UserService;
-import com.cognizant.RestoraApp.util.LoginUser;
+import com.niladrimondal.RestoraApp.bean.UserBean;
+import com.niladrimondal.RestoraApp.controller.UserController;
+import com.niladrimondal.RestoraApp.entity.User;
+import com.niladrimondal.RestoraApp.service.UserService;
+import com.niladrimondal.RestoraApp.util.LoginUser;
 
 public class UserControllerTests {
 
