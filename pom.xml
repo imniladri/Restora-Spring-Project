@@ -12,7 +12,7 @@
 
 	<groupId>com.niladrimondal</groupId>
 	<artifactId>RestoraApp</artifactId>
-	<version>1.0</version>
+	<version>1.0.0</version>
 	<packaging>war</packaging>
 
 	<name>RestoraApp</name>
@@ -150,6 +150,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<finalName>restora-app</finalName>
 	</build>
 
 </project>
