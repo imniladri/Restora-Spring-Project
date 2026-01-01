@@ -1,4 +1,4 @@
-# Restora – Restaurant Management System (Spring Boot) 🍽️
+# Restora: Restaurant Management System (Spring Boot) 🍽️
 
 Restora is a full-stack **Restaurant Management Web Application** built using **Java and Spring Boot**.  
 The project follows **MVC architecture** and provides role-based access for **Users** and **Admins**.
