@@ -2,6 +2,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -163,7 +164,14 @@
                     
                             <div class="food_card">
                                 <div class="food_img">
-                                    <img src="<c:url value='/resources/assets/img/items/${foodItem.foodItemImageSrc}'/>" alt="Food Item" />
+                                	<c:choose>
+                                		<c:when test="${fn:startsWith(foodItem.foodItemImageSrc, 'http')}">
+                                			<img src="${foodItem.foodItemImageSrc}" alt="Food Item" />
+                                		</c:when>
+                                		<c:otherwise>
+	                                    	<img src="<c:url value='/resources/assets/img/items/${foodItem.foodItemImageSrc}'/>" alt="Food Item" />
+	                                    </c:otherwise>
+                                	</c:choose>
                                     <div class="food_badge"><i class="bx bxs-dish"></i>${foodItem.foodItemCategory}</div>
                                 </div>
                                 <div class="food_title">
